@@ -3,6 +3,7 @@
     Properties
     {
         _Color ("Color", Color) = (1, 1, 1, 1)
+        _MainTex ("Texture", 2D) = "white" {}
     }
     SubShader
     {
@@ -23,12 +24,14 @@
             {
                 float4 vertex : POSITION;
                 float3 normal : NORMAL;
+                float3 uv : TEXCOORD0;
             };
 
             struct v2f
             {
                 float4 vertex : SV_POSITION;
                 float3 normal : NORMAL;
+                float3 uv : TEXCOORD0;
             };
 
             sampler2D _MainTex;
@@ -39,12 +42,13 @@
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.normal = UnityObjectToWorldNormal(v.normal);
+                o.uv = v.uv;
                 return o;
             }
 
             fixed4 frag (v2f i) : SV_Target
             {
-                return _Color;
+                return tex2D(_MainTex, i.uv.xy);
             }
             ENDCG
         }
