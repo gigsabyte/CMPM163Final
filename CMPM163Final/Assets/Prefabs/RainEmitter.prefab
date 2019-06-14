@@ -51,11 +51,11 @@ MonoBehaviour:
     min: 0
     max: 40
   emissionMinMax:
-    min: 0
-    max: 500
+    min: 500
+    max: 2000
   gravityMinMax:
-    min: 5
-    max: 9
+    min: 0
+    max: 0
   noiseScroll: {x: 0.001, y: 0.001}
 --- !u!330 &573501540
 ParticleSystemForceField:
@@ -565,12 +565,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intensity: {x: 0, y: 0, z: 0}
-  magCap: 50
+  magCap: 30
   magnitude:
     min: 0
-    max: 250
-  noiseScrollX: {x: 0.002, y: 0.001}
-  noiseScrollZ: {x: 0.001, y: 0.002}
+    max: 100
+  noiseScrollX: {x: 0.0005, y: 0.00071}
+  noiseScrollZ: {x: 0.0001, y: 0.0002}
 --- !u!1 &7041277416703451861
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,9 +686,9 @@ ParticleSystem:
     enabled: 1
     startLifetime:
       serializedVersion: 2
-      minMaxState: 3
-      scalar: 1
-      minScalar: 1
+      minMaxState: 0
+      scalar: 3
+      minScalar: 2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -739,9 +739,9 @@ ParticleSystem:
         m_RotationOrder: 4
     startSpeed:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 4
-      minScalar: 5
+      minMaxState: 3
+      scalar: 15
+      minScalar: 14.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -794,7 +794,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 0.5019608}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -856,7 +856,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.025
+      scalar: 0.015
       minScalar: 0.2
       maxCurve:
         serializedVersion: 2
@@ -1014,9 +1014,9 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationX:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
-      minScalar: 0
+      minMaxState: 3
+      scalar: -0.17453292
+      minScalar: 0.17453292
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1067,7 +1067,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -1120,7 +1120,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotation:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -1172,13 +1172,13 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 5000
     size3D: 0
-    rotation3D: 0
+    rotation3D: 1
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 8.078455
+      scalar: 0
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -1239,7 +1239,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 90, y: 0, z: 0}
-    m_Scale: {x: 50, y: 50, z: 1.3421137}
+    m_Scale: {x: 50, y: 50, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -1437,8 +1437,8 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 388.655
-      minScalar: 384.80692
+      scalar: 1263.6776
+      minScalar: 1261.1405
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4401,7 +4401,7 @@ ParticleSystem:
     lifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.025
+      scalar: 0.01
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4451,7 +4451,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    minVertexDistance: 0.2
+    minVertexDistance: 0.1
     textureMode: 2
     ribbonCount: 1
     shadowBias: 0.5
@@ -4459,19 +4459,19 @@ ParticleSystem:
     dieWithParticles: 0
     sizeAffectsWidth: 0
     sizeAffectsLifetime: 0
-    inheritParticleColor: 1
+    inheritParticleColor: 0
     generateLightingData: 1
     splitSubEmitterRibbons: 0
     attachRibbonsToTransform: 0
     colorOverLifetime:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 1
       minColor: {r: 1, g: 1, b: 1, a: 1}
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 0.9647059}
+        key1: {r: 1, g: 1, b: 1, a: 0}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
