@@ -6,15 +6,19 @@ public class LightningControl : MonoBehaviour
 {
     private ParticleSystem lightning;
     private Color originalColor;
+    private float originalIntensity;
 
     public Light light;
     public float rate;
     public float branchRate;
+    public float flashIntensity;
+    public float fadeSpeed;
 
     void Start()
     {
         lightning = GetComponent<ParticleSystem>();
         originalColor = light.color;
+        originalIntensity = light.intensity;
     }
 
     void Update()
@@ -42,8 +46,15 @@ public class LightningControl : MonoBehaviour
     private IEnumerator Flash()
     {
         yield return new WaitForSeconds(0.025f);
+        light.intensity = flashIntensity;
         light.color = Color.white;
         yield return new WaitForSeconds(0.1f);
+        while(light.intensity > originalIntensity)
+        {
+            light.intensity -= Time.deltaTime * fadeSpeed;
+            yield return new WaitForEndOfFrame();
+        }
         light.color = originalColor;
+        light.intensity = originalIntensity;
     }
 }
