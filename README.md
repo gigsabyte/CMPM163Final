@@ -1,4 +1,4 @@
-# CMPM163Final (Stylized Weather and Lighting)
+# CMPM163 Final Group Project: Stylized Weather and Lighting
 
 by team h:
 
@@ -25,8 +25,8 @@ DELIVERABLES:
    - All code used in this project is contained in this repository
  
 4. Highlight video
-   - Insert embed here
- 
+   - https://youtu.be/hd6MLqmN9b0
+
 5. Initial presentation
    - https://docs.google.com/presentation/d/1PM6PXeIbtIurtBAG6x_LPmaVRIAVFktBUkN_k7YxlyY/edit?usp=sharing
  
