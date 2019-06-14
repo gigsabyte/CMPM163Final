@@ -16,7 +16,10 @@ DELIVERABLES:
    - You're reading it!  
  
 2. Builds 
-   - insert build links here
+   - Windows build: https://drive.google.com/open?id=144vatdE8iWnCktXyV1XfLmg7pnUln6Rz
+   - Mac build: https://drive.google.com/open?id=1zB5uMC2Pyuy1gmFD7u6XkSdzZHcsDfDq
+   
+   <b>NOTE:</b> In order for objects rendered using the Cook-Torrance lighting model to appear, you must set the Graphics quality to <b>Medium</b> or higher. For this reason, there is no WebGL build available, as it uses Low graphics quality.
 
 3. Code for the final project
    - All code used in this project is contained in this repository
