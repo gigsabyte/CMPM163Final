@@ -19,10 +19,10 @@ public class WeatherRain : MonoBehaviour
     public FloatRange emissionMinMax = new FloatRange(10, 20);
     public FloatRange gravityMinMax = new FloatRange(5, 9);
 
-    #region Customization fields
+    //#region Customization fields
     private ParticleSystem[] emitters;
     private ParticleSystem[] splashers;
-    #endregion
+    //#endregion
 
     // Start is called before the first frame update
     void Awake()

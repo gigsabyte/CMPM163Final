@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/PartyZone.unity
+    guid: cbf724bd967ff6642937f24a08b519ff
   m_configObjects: {}

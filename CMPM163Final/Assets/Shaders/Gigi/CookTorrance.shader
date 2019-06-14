@@ -26,7 +26,7 @@ Shader "CMPM163/CookTorrance"
 		        Comp NotEqual
 		        Pass Replace
 		    }*/
-			//Blend One One
+			//Blend SrcAlpha OneMinusSrcAlpha
 			
             CGPROGRAM
             #pragma vertex vert
@@ -55,7 +55,7 @@ Shader "CMPM163/CookTorrance"
             
             struct vertexShaderOutput
             {
-                float4 position: SV_POSITION;
+                float4 position: POSITION;
                 float3 normal: NORMAL;
                 float3 vertInWorldCoords: TEXCOORD1;
                 float2 uv: TEXCOORD0;
