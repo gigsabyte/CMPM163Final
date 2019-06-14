@@ -5,10 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(ParticleSystemForceField))]
 public class WindController : MonoBehaviour
 {
-    [Range(0, 1)]
     [SerializeField]
-    private float _intensity = 0;
-    public float Intensity { get => _intensity; set => SetIntensity(value); }
+    private Vector3 intensity = new Vector3();
+    public float magCap = 200;
     public MathUtils.FloatRange magnitude = new MathUtils.FloatRange(0, 40);
 
     private ParticleSystemForceField pf;
@@ -18,27 +17,28 @@ public class WindController : MonoBehaviour
         pf = GetComponent<ParticleSystemForceField>();
     }
 
-    public Vector2 noiseScroll = new Vector2();
-    private float noiseX = 0f;
-    private float noiseY = 0f;
+    public Vector2 noiseScrollX = new Vector2();
+    private Vector2 noiseX = new Vector2();
+    public Vector2 noiseScrollZ = new Vector2();
+    private Vector2 noiseZ = new Vector2();
     // Update is called once per frame
     void Update()
     {
-        noiseX += noiseScroll.x;
-        noiseY += noiseScroll.y;
-        SetIntensity(Mathf.PerlinNoise(noiseX, noiseY));
+        noiseX += noiseScrollX;
+        noiseZ += noiseScrollZ;
+        SetXIntensity(Mathf.PerlinNoise(noiseX.x, noiseX.y));
+        SetZIntensity(Mathf.PerlinNoise(noiseZ.x, noiseZ.y));
     }
 
-    public void SetIntensity(float value)
+    public void SetXIntensity(float value)
     {
-        _intensity = value;
-        pf.directionX = Mathf.Sin(value) * magnitude.Lerp(value);
-        pf.directionZ = Mathf.Cos(value) * magnitude.Lerp(value);
-        if (Mathf.PerlinNoise(pf.directionX.constant, pf.directionZ.constant) > 0.5)
-            pf.directionX = -pf.directionX.constant;
-        if (Mathf.PerlinNoise(pf.directionZ.constant, pf.directionX.constant) > 0.5)
-            pf.directionX = -pf.directionZ.constant;
+        intensity.x = value;
+        pf.directionX = Mathf.Sin(value) * ((value - 0.5f) * 2) * Mathf.Min(magCap, magnitude.Lerp(value));
+    }
 
-        //pf.directionX = direction == Direction.East ? magnitude.Lerp(value) : -magnitude.Lerp(value);
+    public void SetZIntensity(float value)
+    {
+        intensity.z = value;
+        pf.directionZ = Mathf.Cos(value) * ((value - 0.5f) * 2) * Mathf.Min(magCap, magnitude.Lerp(value));
     }
 }
