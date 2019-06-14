@@ -5,16 +5,26 @@ using UnityEngine;
 public class LightningControl : MonoBehaviour
 {
     private ParticleSystem lightning;
+    private Color originalColor;
+
     public Light light;
+    public float rate;
     public float branchRate;
 
     void Start()
     {
         lightning = GetComponent<ParticleSystem>();
+        originalColor = light.color;
     }
 
     void Update()
     {
+        // randomly emit lightning strikes
+        if(Random.value < rate)
+        {
+            EmitLightning();
+        }
+
         // random chance of creating a lightning branch from subemitter
         if(Random.value < branchRate)
         {
@@ -31,7 +41,6 @@ public class LightningControl : MonoBehaviour
     // simulate lightning flash by changing point light color
     private IEnumerator Flash()
     {
-        Color originalColor = light.color;
         yield return new WaitForSeconds(0.025f);
         light.color = Color.white;
         yield return new WaitForSeconds(0.1f);
