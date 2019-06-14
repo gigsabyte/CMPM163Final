@@ -13,6 +13,7 @@ public class LightningControl : MonoBehaviour
     public float branchRate;
     public float flashIntensity;
     public float fadeSpeed;
+    public AudioSource thunderSource;
 
     void Start()
     {
@@ -39,6 +40,8 @@ public class LightningControl : MonoBehaviour
     public void EmitLightning()
     {
         lightning.Emit(1);
+        if(!thunderSource.isPlaying)
+            thunderSource.Play();
         StartCoroutine(Flash());
     }
 
