@@ -4,17 +4,17 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: MAT_Hat_Party
-  m_Shader: {fileID: 4800000, guid: e1b0c4ae548e1cd4580766c2d7c95ce5, type: 3}
+  m_Shader: {fileID: 4800000, guid: 37d8f3e81a0a8614997f15939d77828f, type: 3}
   m_ShaderKeywords: _ALPHATEST_ON _NORMALMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
-  stringTagMap:
-    RenderType: TransparentCutout
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -55,11 +55,16 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SecondTex:
+        m_Texture: {fileID: 2800000, guid: 3d1c824376120de40a81d56eb31e9a58, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _Absorption: 1.45
     - _BumpScale: 1
     - _Cutoff: 0.073
     - _DetailNormalMapScale: 1
@@ -68,17 +73,23 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.053
     - _GlossyReflections: 1
+    - _Gooch: 0
     - _Metallic: 0
     - _Mode: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _Roughness: 0.15
+    - _Shininess: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.920968, g: 0.9103774, b: 1, a: 1}
+    - _Cool: {r: 0, g: 0, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColorUI: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _SpecularColor: {r: 0.014241928, g: 0.011658944, b: 0.01886791, a: 1}
+    - _Warm: {r: 1, g: 0, b: 0, a: 1}

@@ -60,7 +60,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Absorption: 5.64
+    - _Absorption: 13.37
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -73,7 +73,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Roughness: 0.99
+    - _Roughness: 0.44
     - _Shininess: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -84,5 +84,5 @@ Material:
     - _Color: {r: 0, g: 0, b: 0, a: 1}
     - _Cool: {r: 0, g: 0, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SpecularColor: {r: 0.1981132, g: 0.18993603, b: 0.12989499, a: 1}
+    - _SpecularColor: {r: 0.13207549, g: 0.10653259, b: 0.11770521, a: 1}
     - _Warm: {r: 1, g: 0, b: 0, a: 1}
