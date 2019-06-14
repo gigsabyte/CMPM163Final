@@ -168,7 +168,7 @@ Shader "CMPM163/CookTorrance"
                 }
                 float3 Ks = _SpecularColor.rgb;
 
-				float D = beckmann(HdotN, _Roughness);
+				float D = beckmann(_Roughness, HdotN);
 
 				float3 ior = float3(col.r + 1, col.g + 1, col.b +1);
 				float3 F;
