@@ -25,7 +25,7 @@ DELIVERABLES:
    - Insert embed here
  
 5. Initial presentation
-   - Insert link here 
+   - https://docs.google.com/presentation/d/1PM6PXeIbtIurtBAG6x_LPmaVRIAVFktBUkN_k7YxlyY/edit?usp=sharing
  
 6. Documentation paper
-   - Insert link here
+   - https://docs.google.com/document/d/1VRGPga8WiZNU0pRlTUs19gJpgChc3vvpoqft6L4QaS8/edit?usp=sharing
